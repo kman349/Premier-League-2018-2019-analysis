@@ -1,0 +1,56 @@
+---
+title: "Impact of the first goal"
+output: html_document
+---
+
+```{r load-packages, include=FALSE}
+library(dplyr)
+library(knitr)
+library(flextable)
+```
+
+```{r setup, include=FALSE}
+library(dplyr)
+knitr::opts_chunk$set(echo=TRUE)
+load(file = "goal_timing.RData")
+```
+This analysis explores the impact of the first goal on the outcome of a match. Data taken from the 2018/19 premier league football season will show the frequency of goals scored by minutes, how often a team wins when they score first (split by home and away) and a teams result outcome based on the minute in which they score the first goal. 
+
+## How often do you win if you score the first goal?
+Of the 380 matches played in the 2018/19 football season, 348 matches had at least one goal scored.Figure 1 shows that of the 348 games in which a goal was scored, 74% of the time the team which scored the first goal would win the match, whilst 26% would lead to a loss or draw. 
+
+**Figure 1: The result outcome of teams which score first in the 2018/19 Premier League football season** 
+```{r win_ratio, echo=FALSE,fig.height=3,fig.width=6}
+plot(win_ratio)
+```
+
+Of the 380 games in the 2018/19 Premier League season, 41% (156) of matches saw the home team score first and home team win. This season also saw 29% (112) of matches where the away team would score first and the away team win. This is demonstrated in figure 2 below.
+
+```{r result_outcome, echo=FALSE,fig.height=3,fig.width=10}
+plot(result_outcome)
+```
+
+There were 195 matches (51%) where the home team scored first in the 2018/19 Premier League season. Of these 195 matches, 80% (156) of the time the home team would win.The proportion of matches in which the home team would score first and lose was only 8% (16) and 12% (23) of matches saw the home team score first and draw. 
+
+There were 163 matches (43%) where the away team scored first in the 2018/19 Premier League season. Of the 163 matches, 69% (112) of the time the away team would win. This is 11 percentage points lower than when a home team scores the first goal. The proportion of matches in which the away team would score first and lose was 15% (25) and 16% (26) of matches saw the away team score first and draw. 
+
+## When is the most frequent time a goal is scored during a match?
+Our data shows that the most common time for a team to score their first goal were in the 5th, 10th, 11th and 24th minute of a match, with 11 goals scored in each of those minutes. Just over a quarter of first goals (26%) were scored in the first 11 minutes of matches and just over half of the first goals scored (53%) were scored in the first 24 minutes of matches. 
+
+From 55 minutes onwards, the team which scored first would either win or draw the match. In other words, no team was able to win the match after going one nil down from the 55th minute onwards. Of the 348 matches in which a goal was scored, 51 of those matches (15%) saw the first goal scored from 55 minutes onwards. Of those 51 matches, 43(84%) of those matches were won by the team scoring the first goal whilst eight (16%) of those matches ended in a draw. 
+
+```{r first_goal_outcome, echo=FALSE,fig.height=3,fig.width=10}
+plot(first_goal_outcome)
+```
+
+
+
+
+
+
+
+
+
+
+
+
