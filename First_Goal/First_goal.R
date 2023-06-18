@@ -9,13 +9,10 @@ STEP 1:
 Load the packages needed to manipulate the data
 "-------------------------------------------------------------------------------------------------------------------------------------------
 
-library(anchors)
-library(dplyr)
-library(ggplot2)
-library(ggthemes)
-library(tidyr)
-library(plotly)
-library(janitor)
+library(pacman)
+
+p_load(anchors,dplyr,ggplot2,ggthemes,tidyr,plotly,janitor)
+
 
 "-------------------------------------------------------------------------------------------------------------------------------------------
 STEP 2: 
